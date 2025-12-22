@@ -1,0 +1,118 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#e9f5ff;
+  color:#0f172a;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+  color:#0a2c4c;
+}
+.hero h1{
+  font-size:34px;
+  color:#063e6b;
+}
+.hero p{
+  color:#4b6a85;
+}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px;
+}
+.section h2{
+  margin-bottom:18px;
+  color:#063e6b;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:18px;
+}
+
+/* CARDS */
+.card, .highlight-card{
+  background:white;
+  border-radius:16px;
+  padding:18px;
+  border:1px solid #d7eefe;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+  opacity:0;
+}
+.card:hover, .highlight-card:hover{
+  transform:translateY(-4px);
+}
+
+/* Highlight */
+.highlight-card{
+  text-align:center;
+}
+.highlight-badge{
+  background:#16a34a;
+  color:white;
+  padding:6px 12px;
+  display:inline-block;
+  border-radius:30px;
+  margin-bottom:6px;
+}
+
+/* QR */
+.qr{
+  width:160px;
+  height:160px;
+  border-radius:10px;
+  border:2px dashed #38bdf8;
+  margin:10px auto;
+}
+
+/* ADDRESS */
+.address{
+  background:#eff8ff;
+  border:1px solid #9ad8ff;
+  padding:10px;
+  border-radius:6px;
+  font-size:12px;
+  cursor:pointer;
+  word-break:break-all;
+}
+.address:hover{
+  background:#dff2ff;
+}
+
+/* FAQ */
+.faq{
+  max-width:900px;
+  margin:20px auto;
+}
+.faq-item{
+  background:white;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #cfe9ff;
+  margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#4b6a85;
+}
+
+/* Animations */
+.fade{
+  animation:fadeSlide .6s ease forwards;
+}
+@keyframes fadeSlide{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}

@@ -241,3 +241,76 @@ footer {
     max-width: 200px;
   }
 }
+
+/* ======================================================
+   POLISH LAYOUT – GRID 2 KOLOM (TABLET / DESKTOP)
+====================================================== */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ======================================================
+   ADDRESS BOX – LEBIH JELAS & USER-FRIENDLY
+====================================================== */
+.address {
+  margin-top: 8px;
+  background: #0f172a;        /* gelap = interaktif */
+  color: #e5e7eb;
+
+  border: 1px solid #334155;
+  padding: 12px 42px 12px 12px;
+  border-radius: 10px;
+
+  font-size: 12px;
+  cursor: pointer;
+  word-break: break-all;
+  text-align: center;
+
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.address::after {
+  content: "📋 Copy";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.address:hover {
+  background: #020617;
+  border-color: #38bdf8;
+}
+
+/* ======================================================
+   MEMO BOX – LEBIH KONTRAS
+====================================================== */
+.memo {
+  background: #fff7ed;
+  border: 1px dashed #fb923c;
+  color: #7c2d12;
+}
+
+/* ======================================================
+   FAQ – TIDAK DATAR, TETAP CORPORATE
+====================================================== */
+.faq-item {
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+  border-left: 4px solid #38bdf8;
+}
+
+.faq-item h3 {
+  color: #0b3a5b;
+}
+
+/* ======================================================
+   FOOTER – PENUTUP HALAMAN LEBIH ELEGAN
+====================================================== */
+footer {
+  background: linear-gradient(180deg, #eaf6ff, #dbeafe);
+  border-top: 1px solid #c7d2fe;
+}

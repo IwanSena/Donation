@@ -74,6 +74,20 @@ body{
   margin:10px auto;
 }
 
+
+.memo{
+  margin-top:6px;
+  background:#fff4cc;
+  border:1px dashed #facc15;
+  padding:6px;
+  border-radius:6px;
+  font-size:12px;
+  cursor:pointer;
+}
+.memo::before{
+  content:"⚠ ";
+}
+
 /* ADDRESS */
 .address{
   background:#eff8ff;

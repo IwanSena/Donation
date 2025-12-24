@@ -1,132 +1,223 @@
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background:#e9f5ff;
-  color:#0f172a;
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:60px 20px;
-  color:#0a2c4c;
-}
-.hero h1{
-  font-size:34px;
-  color:#063e6b;
-}
-.hero p{
-  color:#4b6a85;
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eaf6ff;
+  color: #0f172a;
+  line-height: 1.5;
 }
 
-/* SECTION */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 20px;
-}
-.section h2{
-  margin-bottom:18px;
-  color:#063e6b;
+/* ===============================
+   HERO
+================================ */
+.hero {
+  text-align: center;
+  padding: 48px 20px;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:18px;
+.hero h1 {
+  font-size: 32px;
+  color: #0b3a5b;
 }
 
-/* CARDS */
-.card, .highlight-card{
-  background:white;
-  border-radius:16px;
-  padding:18px;
-  border:1px solid #d7eefe;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  transition:.3s;
-  opacity:0;
-}
-.card:hover, .highlight-card:hover{
-  transform:translateY(-4px);
+.hero p {
+  color: #4b6a85;
+  margin-top: 8px;
 }
 
-/* Highlight */
-.highlight-card{
-  text-align:center;
-}
-.highlight-badge{
-  background:#16a34a;
-  color:white;
-  padding:6px 12px;
-  display:inline-block;
-  border-radius:30px;
-  margin-bottom:6px;
+/* ===============================
+   SECTION
+================================ */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 28px 16px;
 }
 
-/* QR */
-.qr{
-  width:160px;
-  height:160px;
-  border-radius:10px;
-  border:2px dashed #38bdf8;
-  margin:10px auto;
+.section h2 {
+  margin-bottom: 16px;
+  font-size: 22px;
+  color: #0b3a5b;
 }
 
-
-.memo{
-  margin-top:6px;
-  background:#fff4cc;
-  border:1px dashed #facc15;
-  padding:6px;
-  border-radius:6px;
-  font-size:12px;
-  cursor:pointer;
-}
-.memo::before{
-  content:"⚠ ";
+/* ===============================
+   GRID
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
 }
 
-/* ADDRESS */
-.address{
-  background:#eff8ff;
-  border:1px solid #9ad8ff;
-  padding:10px;
-  border-radius:6px;
-  font-size:12px;
-  cursor:pointer;
-  word-break:break-all;
-}
-.address:hover{
-  background:#dff2ff;
-}
-
-/* FAQ */
-.faq{
-  max-width:900px;
-  margin:20px auto;
-}
-.faq-item{
-  background:white;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #cfe9ff;
-  margin-bottom:8px;
+/* ===============================
+   CARD (ANTI RUSAK)
+================================ */
+.card,
+.highlight-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #d6ebff;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  overflow: hidden;          /* PENTING */
+  display: flex;
+  flex-direction: column;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:25px;
-  color:#4b6a85;
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 2px;
 }
 
-/* Animations */
-.fade{
-  animation:fadeSlide .6s ease forwards;
+.card small {
+  color: #64748b;
+  margin-bottom: 8px;
 }
-@keyframes fadeSlide{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
+
+/* ===============================
+   QR CONTAINER (INI KUNCI UTAMA)
+================================ */
+.qr {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;       /* WAJIB */
+  margin: 12px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d7eefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;          /* WAJIB */
+}
+
+/* GAMBAR QR */
+.qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* WAJIB */
+  display: block;
+}
+
+/* ===============================
+   ADDRESS BOX
+================================ */
+.address {
+  margin-top: 8px;
+  background: #eff8ff;
+  border: 1px solid #9ad8ff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  word-break: break-all;
+  text-align: center;
+}
+
+.address:hover {
+  background: #dff2ff;
+}
+
+/* ===============================
+   MEMO / TAG (KOIN TERTENTU)
+================================ */
+.memo {
+  margin-top: 6px;
+  background: #fff4cc;
+  border: 1px dashed #facc15;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.memo::before {
+  content: "⚠ ";
+  font-weight: bold;
+}
+
+/* ===============================
+   HIGHLIGHT CARD (USDT GAS FREE)
+================================ */
+.highlight-card {
+  text-align: center;
+}
+
+.highlight-badge {
+  display: inline-block;
+  background: #0ca678;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   FAQ
+================================ */
+.faq {
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+.faq-item {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #d6ebff;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 26px;
+  color: #4b6a85;
+  font-size: 14px;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+.fade {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE (HP AMAN)
+================================ */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .qr {
+    max-width: 200px;
+  }
 }

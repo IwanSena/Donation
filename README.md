@@ -19,4 +19,4 @@ Donate with crypto
 Copyright © 2025 Iwan Sena.  
 ---
 
-###### © 2024–2025 Iwan Sena — All Rights Reserved • Built with care by [IwanSena](https://github.com/IwanSena)
+###### © 2025 Iwan Sena — All Rights Reserved • Built with care by [IwanSena](https://github.com/IwanSena)

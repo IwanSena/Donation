@@ -3,7 +3,7 @@ Donate with crypto
 
 [![Website](https://img.shields.io/badge/Visit-My%20Page-blue?style=for-the-badge&logo=google-chrome)](https://iwansena.github.io)
 
-# Endsi — Premium Indie Project
+#⚡🚨
 
 [![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-222222?labelColor=0f0f10&color=8A2BE2&style=for-the-badge)](#license)
 [![Build](https://img.shields.io/badge/Build-passing-222222?labelColor=0f0f10&color=00C853&style=for-the-badge)](#)
